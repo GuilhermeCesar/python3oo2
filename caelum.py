@@ -20,18 +20,17 @@ class Alura(Funcionario):
         print('Mostrando perguntas não respondidas do fórum')
 
 
+class Hipster:
+    def __str__(self):
+        return f'Hipester,{self.nome}'
+
+
 class Junior(Alura):
     pass
 
 class Pleno(Alura, Caelum):
     pass
 
-jose = Junior()
-jose.busca_perguntas_sem_resposta()
-jose.mostrar_tarefas()
+class Senior(Alura, Caelum, Hipster):
+    pass
 
-
-luan = Pleno()
-luan.busca_perguntas_sem_resposta()
-luan.busca_cursos_do_mes()
-luan.mostrar_tarefas()
